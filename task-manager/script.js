@@ -2,9 +2,33 @@ const input=document.getElementById("taskInput");
 const addBtn=document.getElementById("addBtn");
 const list=document.getElementById("taskList");
 const filters=document.querySelectorAll(".filter-row button");
+const toggle=document.getElementById("themeToggle");
 
 let tasks=[];
 let currentFilter="all";
+
+
+
+
+if(localStorage.getItem("theme")==="dark"){
+document.body.classList.add("dark");
+toggle.textContent="Light Mode";
+}
+
+toggle.onclick=()=>{
+document.body.classList.toggle("dark");
+
+if(document.body.classList.contains("dark")){
+localStorage.setItem("theme","dark");
+toggle.textContent="Light Mode";
+}else{
+localStorage.setItem("theme","light");
+toggle.textContent="Dark Mode";
+}
+};
+
+
+
 
 addBtn.onclick=()=>{
 if(!input.value.trim())return;

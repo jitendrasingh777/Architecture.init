@@ -1,25 +1,78 @@
+:root{
+--bg:#f2ede2;
+--card:#ffffff;
+--text:#111827;
+--border:#ccc;
+--primary:#2563eb;
+--task-border:#eee;
+}
+
+.dark{
+--bg:#0f172a;
+--card:#111827;
+--text:#e5e7eb;
+--border:#374151;
+--primary:#3b82f6;
+--task-border:#1f2937;
+}
+
+
 body{
 margin:0;
 padding:0;
 font-family:Inter, sans-serif;
-background:#f2ede2;
+background:var(--bg);
+color:var(--text);
 display:flex;
 justify-content:center;
-padding-top:50px;
+align-items:flex-start;
+min-height:100vh;
+padding-top:60px;
+transition:.25s;
 }
+
+
 
 .wrap{
 width:500px;
-background:#fff;
-border-radius:10px;
-padding:24px;
-box-shadow:0 6px 20px rgba(0,0,0,.1);
+background:var(--card);
+border-radius:12px;
+padding:26px;
+box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
+
+
+
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:20px;
 }
 
 h2{
-margin:0 0 16px 0;
+margin:0;
 font-weight:600;
 }
+
+
+
+.toggle{
+padding:8px 16px;
+border-radius:8px;
+border:none;
+background:var(--primary);
+color:#fff;
+cursor:pointer;
+font-weight:500;
+transition:.2s;
+}
+
+.toggle:hover{
+transform:translateY(-1px);
+}
+
+
 
 .add-row{
 display:flex;
@@ -30,18 +83,22 @@ margin-bottom:14px;
 .add-row input{
 flex:1;
 padding:10px;
-border:1px solid #ccc;
+border:1px solid var(--border);
 border-radius:6px;
+background:transparent;
+color:var(--text);
 }
 
 .add-row button{
 padding:10px 14px;
-background:#2563eb;
+background:var(--primary);
 border:none;
 color:#fff;
 border-radius:6px;
 cursor:pointer;
 }
+
+
 
 .filter-row{
 display:flex;
@@ -51,18 +108,20 @@ margin-bottom:14px;
 
 .filter-row button{
 flex:1;
-border:1px solid #ccc;
-background:#fff;
+border:1px solid var(--border);
+background:transparent;
 border-radius:6px;
 padding:8px;
 cursor:pointer;
+color:var(--text);
 }
 
 .filter-row .active{
-background:#2563eb;
-border-color:#2563eb;
+background:var(--primary);
+border-color:var(--primary);
 color:#fff;
 }
+
 
 #taskList{
 list-style:none;
@@ -75,7 +134,7 @@ display:flex;
 align-items:center;
 justify-content:space-between;
 padding:10px 0;
-border-bottom:1px solid #eee;
+border-bottom:1px solid var(--task-border);
 }
 
 .left{
