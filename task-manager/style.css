@@ -167,3 +167,23 @@ color:#0ea5e9;
 .actions .del{
 color:#e11d48;
 }
+
+.task.low{
+border-left:4px solid #22c55e;
+}
+
+.task.medium{
+border-left:4px solid #f59e0b;
+}
+
+.task.high{
+border-left:4px solid #ef4444;
+}
+
+.add-row select{
+padding:10px;
+border:1px solid var(--border);
+border-radius:6px;
+background:transparent;
+color:var(--text);
+}

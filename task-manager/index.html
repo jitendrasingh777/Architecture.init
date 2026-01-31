@@ -18,15 +18,26 @@
     </div>
 
     <div class="add-row">
-        <input id="taskInput" type="text" placeholder="Add a task">
-        <button id="addBtn">Add</button>
-    </div>
+  <input id="taskInput" type="text" placeholder="Add a task">
+
+  <select id="prioritySelect">
+    <option value="low">Low</option>
+    <option value="medium" selected>Medium</option>
+    <option value="high">High</option>
+  </select>
+
+  <button id="addBtn">Add</button>
+</div>
+
 
     <div class="filter-row">
         <button data-filter="all" class="active">All</button>
         <button data-filter="pending">Pending</button>
         <button data-filter="completed">Completed</button>
+        
     </div>
+    <p id="counter" class="counter"></p>
+
 
     <ul id="taskList"></ul>
 
